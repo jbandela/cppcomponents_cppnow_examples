@@ -2,8 +2,9 @@
 #include "Person.h"
 
 int main(){
-  Person p;
-  p.SetName("John");
-  std::cout << p.GetName();
+  Person p{"John"};
+  std::cout << p.GetName() << "\n";
+  p.SetName("John2"); 
+  std::cout << p.GetName() << "\n";
 
 }

@@ -21,8 +21,14 @@ struct IPersonFactory:cppcomponents::define_interface<cppcomponents::uuid<0xfe3c
 
 };
 
+struct IPersonStatics:cppcomponents::define_interface<cppcomponents::uuid<0x4e2c6b15, 0x9fd2, 0x4813, 0xa4d4, 0x796da8c76f74>>
+{
+    std::int32_t GetPopulation();
+    CPPCOMPONENTS_CONSTRUCT(IPersonStatics,GetPopulation)
+};
+
 inline const char* PersonId(){return "Person!Person";}
-typedef cppcomponents::runtime_class<PersonId,cppcomponents::object_interfaces<IPerson>,cppcomponents::factory_interface<IPersonFactory>> Person_rt;
+typedef cppcomponents::runtime_class<PersonId,cppcomponents::object_interfaces<IPerson>,cppcomponents::factory_interface<IPersonFactory>,cppcomponents::static_interfaces<IPersonStatics>> Person_rt;
 typedef cppcomponents::use_runtime_class<Person_rt> Person;
 
 
