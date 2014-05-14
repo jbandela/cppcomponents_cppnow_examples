@@ -4,8 +4,8 @@ struct ImplementPerson:cppcomponents::implement_runtime_class<ImplementPerson,Pe
 {
 
     std::string name_;
-    std::string GetString(){return name_;}
-    void SetString(std::string s){name_ = s;}
+    std::string GetName(){return name_;}
+    void SetName(std::string s){name_ = s;}
 
 };
 
