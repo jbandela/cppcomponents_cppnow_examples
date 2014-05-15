@@ -4,6 +4,5 @@
 int main(){
   Person p;
   p.SetName("John");
-  std::cout << p.GetName();
-
+  std::cout << p.GetName() << "\n";
 }
